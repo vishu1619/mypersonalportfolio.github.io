@@ -1,0 +1,331 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Acme', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+
+
+
+
+.home{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(42, 46, 49);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+}
+.content
+{
+  text-align: center;
+}
+.content h3{
+  text-shadow: 2px 2px #ffffff40;
+  font-size: 3em;
+}
+.content h1{
+  text-shadow: 2px 2px #ffffff50;
+  font-size: 5em;
+}
+.content h2{
+  text-shadow: 3px 3px rgb(255, 69, 0, 0.4);
+  color: rgb(255, 69, 0);
+  font-size: 4em;
+}
+.navigation{
+  margin-top: 40px;  
+  position: relative;
+  padding: 120px;
+}
+.icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: rgb(42, 46, 49);
+  z-index: 20;
+  transition: 0.5s;
+  box-shadow: none;
+  cursor: pointer;
+}
+.icon:hover{
+  box-shadow: 0 0 4px 6px #ffffff70, 0 0 4px 10px #ffffff30;
+}
+.icon .fas{
+  font-size: 30px;
+}
+.major-icon{
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  top: 82px;
+  left: 82px;
+  z-index: 30;
+}
+.bar{
+  position: relative;
+}
+.first-bar, .second-bar, .third-bar{
+  background-color: rgb(42, 46, 49);
+  width: 40px;
+  height: 6px;
+  margin: 5px;
+  transition: 0.5s;
+  position: relative;
+}
+.first-bar-click{
+  transform: rotate(135deg);
+  top: 5px;
+}
+.second-bar-click{
+  display: none;
+}
+.third-bar-click{
+  bottom: 5px;
+  transform: rotate(45deg);
+}
+.miner-icon{
+  width: 55px;
+  height: 55px;
+  top: 85px;
+  left: 95px;
+  transition: 1s;
+}
+.about-icon{
+  top: 10px;
+  left: 94px;
+  transform: rotate(360deg);
+}
+.contact-icon{
+  top: 155px;
+  left: 160px;
+  transform: rotate(360deg);
+}
+.portfolio-icon{
+  top: 155px;
+  left: 27px;
+  transform: rotate(360deg);
+}
+.tooltip{
+  visibility: hidden;
+  position: absolute;
+  color: #ffffff;
+  width: 100px;
+}
+.about-icon .tooltip{
+  top: -30px;
+  left: 0;
+}
+.portfolio-icon .tooltip{
+  top: 70px;
+  left: -5px;
+}
+.contact-icon .tooltip{
+  top: 70px;
+  left: -4px;
+}
+.icon:hover .tooltip{
+  visibility: visible;
+}
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+
+
+
+
+
+
+
+.portfolio{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  height: 100vh;
+  background-color: #eeeeee;
+  width: 100vw;
+  overflow-x: hidden;
+  display: none;
+}
+.open-portfolio{
+  display: initial;
+}
+.portfolio-heading h1{
+  text-align: center;
+  font-size: 5.5em;
+  font-weight: 900;
+  font-style: italic;
+  margin: 30px 0;
+  color: rgb(42, 46, 49);
+  text-shadow: 4px 4px rgb(42, 46, 49, 0.4);
+}
+.close-portfolio{
+  position: absolute;
+  font-size: 3em;
+  top: 60px;
+  right: 80px;
+  cursor: pointer;
+  color: rgb(42, 46, 49);
+  text-shadow: 2px 2px rgb(42, 46, 49, 0.65);
+}
+.underline-portfolio{
+  position: absolute;
+  width: 430px;
+  height: 15px;
+  background-color: rgb(255,69,0);
+  left: 480px;
+  top: 98px;
+  transform: skewX(-25deg);
+  z-index: -1;
+}
+.project-sites{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.project img{
+  width: 440px;
+  height: 330px;
+  border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+.contact{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  height: 100vh;
+  width: 100vw;
+  background-color: #eeeeee;
+  transition: 2s;
+  overflow-x: hidden;
+  display: none;
+  transition: 0.5s;
+}
+.open-contact{
+  display: initial;
+}
+.close-contact{
+  position: absolute;
+  font-size: 3em;
+  top: 60px;
+  right: 80px;
+  cursor: pointer;
+  color: rgb(42, 46, 49);
+  text-shadow: 2px 2px rgb(42, 46, 49, 0.65);
+}
+.contact-heading{
+  text-align: center;
+  font-size: 5.5em;
+  font-weight: 900;
+  font-style: italic;
+  margin: 30px 0;
+  color: rgb(42, 46, 49);
+  text-shadow: 4px 4px rgb(42, 46, 49, 0.4);
+}
+.underline-contact{
+  position: absolute;
+  width: 365px;
+  height: 15px;
+  background-color: rgb(255,69,0);
+  left: 515px;
+  top: 98px;
+  transform: skewX(-25deg);
+  z-index: -1;
+}
+.contact-main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.mailme{
+  width: 650px;
+  height: 420px;
+  padding: 40px;
+  background-color: rgb(42, 46, 49);
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 12px rgb(42, 46, 49);
+}
+.mailme-info{
+  width: 100%;
+  height: 60px;
+  background-color: rgb(42, 46, 49);
+  border: none;
+  border-bottom: solid 3px #eeeeee;
+  margin: 5px;
+}
+::placeholder{
+  color: #eeeeee;
+  font-size: 1.4em;
+}
+.mailme textarea{
+  margin: 10px;
+  width: 100%;
+  height: 90px;
+  background-color: rgb(42, 46, 49);
+  border: none;
+  border-bottom: solid 3px #eeeeee;
+}
+.mycontact{
+  width: 40%;
+  padding: 30px;
+  text-align: center;
+}
+.mycontact h3{
+  color: rgb(255, 69, 0);
+  font-size: 1.73em;
+}
+.social-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.social-links div{
+  font-size: 2em;
+  margin: 0 15px;
+}
+.contact-links{
+  margin: 10px;
+}
+.links p{
+  font-size: 1.2em;
+}
+.mailme-button{
+  width: 150px;
+  height: 50px;
+  background-color: rgb(255, 69, 0);
+  color: rgb(42, 46, 49);
+  border: 3px solid rgb(42, 46, 49);
+  font-size: 1em;
+  font-weight: 900;
+  margin: 10px;
+  cursor: pointer;
+}
