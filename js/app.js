@@ -150,8 +150,14 @@ $(document).ready(function(){
   $(".contact-div").click(function(){
     $(".contact").addClass("open-contact");
   })
-  $(".close-portfolio").click(function(){
+  $(".close-contact").click(function(){
     $(".contact").removeClass("open-contact");
   })
-  
+
+  $(".about-div").click(function(){
+    $(".about").addClass("open-about");
+  })
+    $(".close-about").click(function(){
+    $(".about").removeClass("open-about");
+  })  
 });
