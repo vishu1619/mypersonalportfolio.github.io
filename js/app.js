@@ -157,7 +157,7 @@ $(document).ready(function(){
   $(".about-div").click(function(){
     $(".about").addClass("open-about");
   })
-    $(".close-about").click(function(){
+  $(".close-about").click(function(){
     $(".about").removeClass("open-about");
-  })  
+  })
 });
